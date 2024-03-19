@@ -13,3 +13,5 @@ UIKit (Storyboard)
 Other things:
 Codable
 Network Service Class
+
+Click on the orange play button in TV Show details screen to play a video.
