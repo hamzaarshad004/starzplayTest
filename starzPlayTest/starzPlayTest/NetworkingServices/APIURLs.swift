@@ -39,35 +39,13 @@ enum APIURLs {
             return .get
         }
     }
-    
-//    var httpBody: Data? {
-//        switch self {
-//        }
-//    }
-    
-//    var headers: [String: String] {
-//        var headers = ["Content-Type": "application/json"]
-//        switch self {
-//            case .register(_), .login(_):
-//                return headers
-//            default:
-//                let authToken = "Bearer \(UserDefaults.standard.string(forKey: UserDefaultKeys.accessToken.rawValue) ?? "Placeholder")"
-//                let addHeaders = ["Authorization": authToken]
-//                headers.merge(addHeaders) { _, new in
-//                    new
-//                }
-//                return headers
-//        }
-//    }
-    
-//    var parameters: [String: Any]? {
-//        switch self {
-//            case .getMedicalReports(let reportType):
-//                return ["report_type": reportType]
-//            default:
-//                return nil
-//        }
-//    }
+        
+    var parameters: [String: Any]? {
+        switch self {
+            default:
+                return ["api_key": "ecef14eac236a5d4ec6ac3a4a4761e8f"]
+        }
+    }
     
     var baseURL: URL {
         // Provide your base URL here

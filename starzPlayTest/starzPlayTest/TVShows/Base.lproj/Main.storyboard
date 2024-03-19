@@ -162,6 +162,9 @@
                                                                 <integer key="value" value="5"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="playButtonClicked:" destination="vSa-Vc-xW9" eventType="touchUpInside" id="iUO-n2-y4S"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBp-1u-sic">
                                                         <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="44"/>

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 class TVShowDetailsVC: UIViewController {
 
@@ -22,6 +23,8 @@ class TVShowDetailsVC: UIViewController {
     var showID: Int = 0
     var tvShowDetailDto: TVShowDetailsDto?
     var seasonDetailDto: SeasonDetailsDto?
+    
+    let playerViewController = AVPlayerViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,6 +85,17 @@ class TVShowDetailsVC: UIViewController {
         }
     }
     
+    @IBAction func playButtonClicked(_ sender: UIButton) {
+        if let url = URL(string: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4") {
+            let player = AVPlayer(url: url)
+            playerViewController.player = player
+            present(playerViewController, animated: true) {
+                self.playerViewController.player?.play()
+            }
+        } else {
+            print("Invalid media file URL")
+        }
+    }
 }
 
 extension TVShowDetailsVC: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
